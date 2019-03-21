@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <table align="center" border="2">
+    <tr bgcolor="#7cfc00">
+        <th width="100">IDNO</th>
+        <th width="250">NAME</th>
+        <th width="100">SALARY</th>
+        <th width="100">UPDATE</th>
+        <th width="100">DELETE</th>
+    </tr>
+
+    {% for x in data %}
+        <tr>
+        <th width="100">{{ x.idno }}</th>
+        <th width="250">{{ x.name }}</th>
+        <th width="100">{{ x.salary }}</th>
+        <th width="100" height="50">
+
+           <form action="/update/" method="post">
+               {% csrf_token %}
+            <input type="hidden" name="id" value="{{ x.idno }}">
+            <BUTTON TYPE="submit"> Yes </BUTTON>
+           </form>
+
+        </th>
+        <th>
+           <a href="/delete/" name="id" value="{{ x.idno }}">
+               Yes
+           </a>
+
+{#            <a href="{% url 'del_emp' %}?id={{ x.idno }}">#}
+{#                Yes#}
+{#            </a>#}
+{#           <a href="{% url 'del_emp' x.idno %}">#}
+{#                 Yes  #}
+{#            </a> #}
+
+
+        </th>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

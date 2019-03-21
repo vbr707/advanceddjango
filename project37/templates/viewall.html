@@ -1,0 +1,14 @@
+<table align="center" border="2">
+    <tr><th colspan="3"> All Employee's Details</th></tr>
+     <tr><th width="100">IDNO</th>
+        <th width="100">NAME</th>
+        <th width="100">SALARY</th>
+    </tr>
+    {% for x in object_list %}
+        <tr>
+        <th>{{ x.idno }} </th>
+        <th>{{ x.name }}</th>
+        <th> {{ x.salary }}</th>
+        </tr>
+    {% endfor %}
+</table>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>employeee</title>
+</head>
+<body align="center">
+<form action="/valid/" method="post">
+{% csrf_token %}
+ <h1>welcome to employee page</h1> <br>
+    {{ username }} <br> <br>
+ <input type="number" name="uid" value="uid" placeholder="Enter uniq id" required> <br>
+ <input type="submit" value="validate"><br><br>
+    </form>
+{{ err_mess }}
+</body>
+</html>

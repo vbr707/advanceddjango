@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>select media</title>
+</head>
+<body>
+<form action="/player/" method="post">
+    {% csrf_token %}
+<table><tr><th>movies</th></tr>
+<tr><td><input type="checkbox" name="cb" value="KGF">KGF</td></tr>
+<tr><td><input type="checkbox" name="cb" value="DEV">DEV</td></tr>
+    <tr><td><button type="submit">SEND</button></td></tr>
+</table>
+</form>
+        {{ data }}
+</body>
+</html>

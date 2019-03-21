@@ -1,0 +1,34 @@
+
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Media player</title>
+</head>
+<body align="center">
+
+    {% if cb %}
+
+        {% for x in data %}
+            {{ x }}
+        {% endfor %}
+
+    {% endif %}
+
+    <!--
+<img src="{% static 'images/kgf.jpg' %}" width="100" height="100">
+
+    <img src="{% static 'images/dev.jpg' %}" width="100" height="100">
+<br><br>
+ <audio controls>
+    <source src="{% static 'audio/Dev(2019)/Cheliya Adugudhama - SenSongsMp3.Co.mp3' %}">
+    <source src="{% static 'audio/Dev(2019)/Nannu Veedi Etto - SenSongsMp3.Co.mp3' %}">
+    <source src="{% static 'audio/Dev(2019)/Oka Vandha Saaralu - SenSongsMp3.Co.mp3' %}">
+    <br><br>
+    <source src="{% static 'audio/KGF(2019)/Dheera Dheera - SenSongsMp3.Co.mp3' %}">
+    <source src="{% static 'audio/KGF(2019)/Dochai - SenSongsMp3.Co.mp3' %}">
+    <source src="{% static 'audio/KGF(2019)/Evvadikevvadu Banisa  - SenSongsMp3.Co.mp3' %}">
+</audio> -->
+</body>
+</html>

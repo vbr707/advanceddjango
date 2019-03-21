@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<body align="center" style="background: cadetblue">
+
+<form action="/send/" method="post">
+    {% csrf_token %}
+    <input type="text" name="na" placeholder="name" required> <br>
+    <input type="password" name="pwd" placeholder="password" required> <br>
+    <input type="radio" name="rd" value="admin" checked>admin
+    <input type="radio" name="rd" value="emp" checked>employee
+    <input type="radio" name="rd" value="user" checked>user
+    <br>
+    <input type="submit" value="signin">
+    <br>
+    {{ err_mess }}
+</form>
+</body>
+</html>

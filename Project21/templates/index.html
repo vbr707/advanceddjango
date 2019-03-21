@@ -1,0 +1,22 @@
+
+<html>
+<body>
+<form action="/savedetails/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+<table align="center">
+    <tr><th width="200">Employee Details</th></tr>
+    <tr><th><input type="number" name="idno" required placeholder="IDNO"></th></tr>
+    <tr><th><input type="text" name="name" required placeholder="NAME"></th></tr>
+    <tr><th><input type="number" name="salary" required placeholder="SALARY"></th></tr>
+    <tr><th><input type="file" name="image" required ></th></tr>
+    <tr><th><input type="submit" value="Save"></th></tr>
+</table>
+</form>
+<h3>
+    <a href="/viewall/">
+        View All Employee's
+    </a>
+</h3>
+
+</body>
+</html>

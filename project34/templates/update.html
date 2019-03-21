@@ -1,0 +1,19 @@
+
+<html>
+<body>
+
+<form action="/updateemployeedetails/" method="post">
+    {% csrf_token %}
+{% for x in data %}
+<table align="center" border="2">
+<tr><th width="250" height="50"> Update Employee Details </th></tr>
+    <tr><th><input type="number" readonly name="idno" required value="{{ x.idno }}"></th></tr>
+    <tr><th><input type="text" name="name" required value="{{ x.name }}"></th></tr>
+    <tr><th><input type="number" name="salary" required value="{{ x.salary }}"></th></tr>
+    <tr><th><input type="submit" value="Update to DB"></th></tr>
+</table>
+{% endfor %}
+</form>
+
+</body>
+</html>

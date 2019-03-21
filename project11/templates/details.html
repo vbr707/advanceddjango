@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1" align="center"> <tr><th colspan="3">details</th></tr>
+    <tr>
+    {% if cb %}
+
+
+    {% for i in cb %}
+    {% for a,b in data.items %}
+        {% if i == a %}
+  <td>  <table align="center" {% if a == "Movies" %} bgcolor="{{ "red" }}"
+                        {% elif a == "Cartoons" %} bgcolor="{{ "green" }}"
+                        {% elif a == "Images" %} bgcolor="{{ "blue" }}"
+                        {% endif %}>
+        <tr><th>{{ i }}</th></tr>
+            {% for k in  b %}
+
+            <tr><td>{{ k }}</td></tr>
+            {% endfor %}
+        </table>
+            {% endif %}
+        {% endfor %}
+        {% endfor %}
+
+    {% else %}
+
+        {{ "<tr><td>please, select any one option </td></tr>" }}
+
+    {% endif %}
+    </td> </tr>
+</table>
+</body>
+</html>

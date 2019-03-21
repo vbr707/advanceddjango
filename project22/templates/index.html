@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+</head>
+<body> <div align="center">
+<form action="/showdetails/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table>
+        <tr>
+            <th>employee details</th>
+        </tr>
+        <tr><th><input type="number" name="idno" placeholder="IDNO" required></th></tr>
+        <tr><th><input type="text" name="name" placeholder="NAME" required></th></tr>
+        <tr><th><input type="number" name="salary" placeholder="SALARY" required></th></tr>
+        <tr><th><input type="file" name="image" required></th></tr>
+        <tr><th><input type="submit" value="save"></th></tr>
+
+    </table>
+</form>
+{{ message }}
+    <a href="/viewAllDetails/"> view employee's table </a>
+</div>
+</body>
+</html>
